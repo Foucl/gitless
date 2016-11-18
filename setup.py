@@ -12,7 +12,9 @@ VERSION = '0.8.4'
 
 # Build helper
 if sys.argv[-1] == 'gl-build':
-  from sh import pyinstaller
+  #from sh import pyinstaller
+  from pbs import Command
+  pyinstaller = Command('pyinstaller')
   import shutil
   import tarfile
   import platform
@@ -36,7 +38,7 @@ if sys.argv[-1] == 'gl-build':
   sys.exit()
 
 
-reqs = ['pygit2>=0.23.0', 'sh>=1.11', 'clint>=0.3.6']
+reqs = ['pygit2>=0.23.0', 'pbs>=0.11', 'clint>=0.3.6']
 if sys.version_info < (2, 7) or (
     sys.version_info < (3, 3) and sys.version_info > (3, 0)):
   reqs.append('argparse')

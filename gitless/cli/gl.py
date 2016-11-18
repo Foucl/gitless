@@ -11,7 +11,8 @@ import sys
 import argparse
 import traceback
 import pygit2
-from sh import ErrorReturnCode
+#from sh import ErrorReturnCode
+from pbs import ErrorReturnCode
 
 from clint.textui import colored
 

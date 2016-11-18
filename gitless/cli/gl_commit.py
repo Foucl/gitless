@@ -8,7 +8,9 @@
 from __future__ import unicode_literals
 
 import subprocess
-from sh import git
+#from sh import git
+from pbs import Command
+git = Command('git')
 
 from gitless import core
 

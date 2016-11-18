@@ -12,7 +12,10 @@ import os
 import re
 import time
 
-from sh import ErrorReturnCode, gl, git
+#from sh import ErrorReturnCode, gl, git
+from pbs import ErrorReturnCode, Command
+git = Command('git')
+gl = Command('gl')
 
 from gitless.tests import utils
 

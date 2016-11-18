@@ -22,7 +22,9 @@ import re
 import shutil
 
 import pygit2
-from sh import git, ErrorReturnCode
+#from sh import git, ErrorReturnCode
+from pbs import ErrorReturnCode, Command
+git = Command('git')
 
 
 ENCODING = getpreferredencoding() or 'utf-8'

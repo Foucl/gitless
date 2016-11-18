@@ -12,7 +12,9 @@ import os
 import shutil
 import tempfile
 
-from sh import git
+#from sh import git
+from pbs import Command
+git = Command('git')
 
 from gitless import core
 import gitless.tests.utils as utils_lib

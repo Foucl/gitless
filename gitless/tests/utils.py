@@ -17,7 +17,9 @@ import sys
 import tempfile
 import unittest
 
-from sh import git, ErrorReturnCode
+#from sh import git, ErrorReturnCode
+from pbs import ErrorReturnCode, Command
+git = Command('git')
 
 
 IS_PY2 = sys.version_info[0] == 2
